@@ -20,7 +20,6 @@ public class MouseLooking : MonoBehaviour
 
     float rotationX;
     
-
     enum RotationAxes
     {
         MouseXAndY = 0,
