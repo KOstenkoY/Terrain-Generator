@@ -34,9 +34,9 @@ public class MeshGenerator : MonoBehaviour
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
 
         int i = 0;
-        for(int z = 0; z <= zSize; z++)
+        for (int z = 0; z <= zSize; z++)
         {
-            for(int x = 0; x <= xSize; x++)
+            for (int x = 0; x <= xSize; x++)
             {
                 float y = Mathf.PerlinNoise(x * 0.3f, z * 0.3f) * 2f;
                 vertices[i] = new Vector3(x, y, z);
@@ -45,12 +45,12 @@ public class MeshGenerator : MonoBehaviour
         }
 
         triangles = new int[xSize * zSize * 6];
-        
+
         int vert = 0;
         int tris = 0;
 
 
-        for(int z = 0; z < zSize; z++)
+        for (int z = 0; z < zSize; z++)
         {
             for (int x = 0; x < xSize; x++)
             {
@@ -68,10 +68,10 @@ public class MeshGenerator : MonoBehaviour
             vert++;
         }
     }
-    
+
     void UpdateMesh()
     {
-        if(mesh != null) 
+        if (mesh != null)
         {
             mesh?.Clear();
 
