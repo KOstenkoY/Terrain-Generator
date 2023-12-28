@@ -61,4 +61,5 @@ Shader "Custom/AnaglyphShader"
             ENDCG
         }
     }
+        FallBack "Diffuse"
 }
